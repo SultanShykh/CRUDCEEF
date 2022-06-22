@@ -10,7 +10,8 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
+            //ContextKey = "CRUDEFCF.BlogDBContext";
+            //AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(CRUDEFCF.Models.BlogDBContext context)

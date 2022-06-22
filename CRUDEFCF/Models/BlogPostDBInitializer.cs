@@ -6,7 +6,7 @@ using System.Web;
 
 namespace CRUDEFCF.Models
 {
-    public class BlogPostDBInitializer: DropCreateDatabaseAlways<BlogDBContext]>
+    public class BlogPostDBInitializer: DropCreateDatabaseAlways<BlogDBContext>
     {
         protected override void Seed(BlogDBContext context)
         {

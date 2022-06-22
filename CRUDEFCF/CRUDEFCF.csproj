@@ -144,6 +144,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\TeacherEntityConfiguration.cs" />
     <Compile Include="Models\BlogDBContext.cs" />
+    <Compile Include="Models\BlogPostDBInitializer.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Student.cs" />
