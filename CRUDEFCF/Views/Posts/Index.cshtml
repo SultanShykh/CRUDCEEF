@@ -1,0 +1,71 @@
+﻿@model IEnumerable<CRUDEFCF.Models.Post>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Add")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DatePublished)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatePublished)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Body)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+@section scripts 
+    {
+    <script>
+        $(document).ready(function () {
+            var arr = [];
+
+            let select = document.querySelector("select");
+
+            for (var i = 0; i < select.options.length; i++) {
+                if (select.options[i].text.includes("US")) {
+                    arr.push(select.options[i].text);
+                }
+            }
+
+            var count = 0;
+            for (var i = 0; i < arr.length; i++) {
+                ++count;
+                console.log(arr[i]);
+            }
+
+            console.log(count);
+        });
+    </script>
+    }
