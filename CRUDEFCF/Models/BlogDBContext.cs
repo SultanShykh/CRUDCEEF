@@ -18,8 +18,10 @@ namespace CRUDEFCF.Models
         {
             //Database.SetInitializer<BlogDBContext>(new DropCreateDatabaseIfModelChanges<BlogDBContext>());
 
+            Database.SetInitializer<BlogDBContext>(new BlogPostDBInitializer());
+
             //Disable initializer
-            Database.SetInitializer<BlogDBContext>(null);
+            //Database.SetInitializer<BlogDBContext>(null);
         }
 
         public DbSet<Post> Posts { get; set; }
